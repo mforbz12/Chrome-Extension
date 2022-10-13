@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  	<meta charset="utf-8">
+  	<meta name="description" content="Your description goes here">
+  	<meta name="keywords" content="one, two, three">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Chrome Exentsion Demo</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+  <!-- START OF BODY -->
+	<body>
+
+    <div id="empty">
+
+      <p class ="phrase"> When would you like a reminder? </p>
+
+<form class = "timer">
+  <label for="startTime">Start time: </label>
+  <!-- <input type="time" id="startTime" /> -->
+
+  <!-- DROPDROWN MENU -->
+  <div class= "timedropdown">
+    <div id="myDropdown">
+      <select id="timedropdown-content">
+        <option value ="ten">10</option>
+        <option value ="twenty">20</option>
+        <option value ="thirty">30</option>
+        <option value="forty">40</option>
+        <option value="fifty">50</option>
+        <option value="sixty">60</option>
+      </select>
+
+<!-- OPTIONS -->
+<span name = "format" id="timeselect">
+  <!-- <option id="hoursSelected" value="hours" >Hours</option> -->
+  <span id="minsSelected" value="minutes" >MIN</span>
+  <!-- <option value="seconds" >Seconds</option> -->
+</span>
+<button type="button" id="set-btn">SUBMIT</button>
+</form>
+
+<!-- COUNTDOWN TEXT -->
+  <span>
+    <ul class = 'countdown-now'>
+      <li id ="hours"></li>
+      <li id ="mins"></li>
+      <li id ="secs"></li>
+    </ul>
+  </span>
+</div>
+  </div>
+		<script type="text/javascript" src="main.js"></script>
+	</body>
+</html>
