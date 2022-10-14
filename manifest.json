@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Productivity Timer",
+  "description": "set different timers to hold you accountable to being productive on a webpage",
+  "version": "1.0",
+  "background": {
+      "service_worker":"background.js"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
+    "default_title": "Timer",
+    "default_icon": "clock.png",
+    "default_popup": "index.html"
+}
+}

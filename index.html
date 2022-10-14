@@ -5,7 +5,7 @@
   	<meta name="description" content="Your description goes here">
   	<meta name="keywords" content="one, two, three">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Chrome Exentsion Demo</title>
+		<title>Chrome Extension Demo</title>
 		<link rel="stylesheet" href="style.css">
 	</head>
 
@@ -13,43 +13,75 @@
 	<body>
 
     <div id="empty">
+      <div class="popupBox" id="hid" style="display: block; visibility: hidden">
+        <div class="transparent-layer"></div>
+        <div class="popup-inner" style="">
 
-      <p class ="phrase"> When would you like a reminder? </p>
+          <div class="popup-msg">You have been on this screen for too long. Please take a break!</div>
 
-<form class = "timer">
-  <label for="startTime">Start time: </label>
-  <!-- <input type="time" id="startTime" /> -->
+        <button class="next-step-btn" id="closeOk" onclick="closeButton()">😴</button></div>
 
-  <!-- DROPDROWN MENU -->
-  <div class= "timedropdown">
-    <div id="myDropdown">
-      <select id="timedropdown-content">
-        <option value ="ten">10</option>
-        <option value ="twenty">20</option>
-        <option value ="thirty">30</option>
-        <option value="forty">40</option>
-        <option value="fifty">50</option>
-        <option value="sixty">60</option>
-      </select>
+      </div>
+      <section class="wide-side-nav" id ="mySidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h1 class ="phrase">When would you like a reminder?</h1>
 
-<!-- OPTIONS -->
-<span name = "format" id="timeselect">
-  <!-- <option id="hoursSelected" value="hours" >Hours</option> -->
-  <span id="minsSelected" value="minutes" >MIN</span>
-  <!-- <option value="seconds" >Seconds</option> -->
-</span>
-<button type="button" id="set-btn">SUBMIT</button>
-</form>
+        <form class = "timer">
+          <label for="startTime">Timer: </label>
+          <!-- <input type="time" id="startTime" /> -->
 
-<!-- COUNTDOWN TEXT -->
-  <span>
-    <ul class = 'countdown-now'>
-      <li id ="hours"></li>
-      <li id ="mins"></li>
-      <li id ="secs"></li>
-    </ul>
-  </span>
-</div>
+          <!-- DROP DROWN MENU -->
+          <div class= "timeDropDown">
+            <div id="myDropdown">
+              <select id="timeDropDown-content">
+              <!-- just using one as a reference countdown -->
+                <option value ="one">1</option>
+                <option value ="five">5</option>
+                <option value ="ten">10</option>
+                <option value ="fifteen">15</option>
+                <option value ="twenty">20</option>
+                <option value ="twentyFive">25</option>
+                <option value ="thirty">30</option>
+                <option value ="thirtyFive">35</option>
+                <option value="forty">40</option>
+                <option value ="fortyFive">45</option>
+                <option value="fifty">50</option>
+                <option value ="fiftyFive">55</option>
+                <option value="sixty">60</option>
+              </select>
+
+        <!-- OPTIONS -->
+        <span name = "format" id="timeselect">
+          <!-- <option id="hoursSelected" value="hours" >Hours</option> -->
+          <span id="minsSelected" value="minutes" >MIN</span>
+          <!-- <option value="seconds" >Seconds</option> -->
+        </span>
+        <div class ='submitButton'>
+        <button type="button" id="set-btn">SUBMIT</button>
+      </div>
+        </form>
+
+        <!-- COUNTDOWN TEXT -->
+          <span>
+            <ul class = 'countdown-now' id="countdown-now">
+              <li id ="hours"></li>
+              <li id ="mins"></li>
+              <li id ="secs"></li>
+            </ul>
+          </span>
+
+        </section>
+         <span class ="wideNav" onclick="openNav()">
+          <div class="meatball-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </span>
+      </section>
+
+
+    </div>
   </div>
 		<script type="text/javascript" src="main.js"></script>
 	</body>
